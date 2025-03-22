@@ -229,3 +229,9 @@ $ git restore .  # clean all unstage file
 $ git restore package.json # clean specific file
 $ git clean -fd 
 ```
+
+clean stage change/files  
+```bash
+$ git restore --staged <filename>  # restore specific file
+$ git restore --staged .  
+```
