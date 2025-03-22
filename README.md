@@ -221,4 +221,11 @@ git clean
 
 * clean cmd don't tracked files and ignored files.   
 
-untracked file.
+untracked file.  
+
+clean unstage changes and untracked files.   
+```bash
+$ git restore .  # clean all unstage file
+$ git restore package.json # clean specific file
+$ git clean -fd 
+```
