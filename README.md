@@ -220,6 +220,29 @@ git remote url
 $ git remote -v
 ```
 
+git check diff of remote changes  
+```bash
+$ git fetch
+$ git diff --name-only HEAD..origin/<remote-branch-name> # HEAD..origin/main  mean current-local..remote-branch
+# To see changes of a specific file
+$ git diff HEAD..origin/<remote-branch-name> -- src/components/Header.tsx
+# To see changes for all files  
+$ git diff --stat HEAD..origin/<remote-branch-name>
+# Compare commit with branch
+$ git diff --name-only <ref1>..<ref2>
+# To see commit logs
+$ git log HEAD..origin/<remote-branch-name> --oneline
+```
+
+git check what is the latest updated branch(local/remote)  
+```bash
+# local
+$ git branch --sort=-committerdate
+# remote
+$ git fetch
+$ git branch -r --sort=-committerdate
+```
+
 git clean 
 
 * clean cmd don't tracked files and ignored files.   
