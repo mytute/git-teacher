@@ -237,10 +237,11 @@ $ git log HEAD..origin/<remote-branch-name> --oneline
 git check what is the latest updated branch(local/remote)  
 ```bash
 # local
-$ git branch --sort=-committerdate
+$ git branch --sort=-committerdate # latest branch on top
+$ git branch --sort=committerdate # latest branch at end
 # remote
 $ git fetch
-$ git branch -r --sort=-committerdate
+$ git branch -r --sort=-committerdate # latest branch on top
 ```
 
 git clean 
