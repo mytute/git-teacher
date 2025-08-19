@@ -215,7 +215,10 @@ $  git diff HEAD
 
 https://stackoverflow.com/questions/9834689/how-do-i-see-the-differences-between-two-branches
 ```
-
+git remote url   
+```bash
+$ git remote -v
+```
 
 git clean 
 
