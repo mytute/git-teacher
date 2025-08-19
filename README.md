@@ -244,6 +244,27 @@ $ git fetch
 $ git branch -r --sort=-committerdate # latest branch on top
 ```
 
+git resolve merge conflicts 
+```bash
+# first check conflict files
+$ git diff --name-only --diff-filter=U
+
+# you can manually edit files.
+<<<<<<< HEAD
+...your version...
+=======
+...incoming version...
+>>>>>>> origin/main
+
+# or you can take one side quickly
+git checkout --ours -- path/to/file # keep *your* version of the file
+git checkout --theirs -- path/to/file # keep *incoming/remote* version of the file
+
+$ git diff --check # Quick check for leftover conflict markers by showing line numbers of files
+$ git commit
+$ git push
+```
+
 git clean 
 
 * clean cmd don't tracked files and ignored files.   
