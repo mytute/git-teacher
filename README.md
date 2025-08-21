@@ -259,6 +259,7 @@ $ git diff --name-only --diff-filter=U
 # or you can take one side quickly
 git checkout --ours -- path/to/file # keep *your* version of the file
 git checkout --theirs -- path/to/file # keep *incoming/remote* version of the file
+git rm composer.lock # or you can remove file
 
 $ git diff --check # Quick check for leftover conflict markers by showing line numbers of files
 $ git commit
